@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Text, Button } from 'react-native';
+import {  View, Text, Button } from 'react-native';
 import {navigation} from 'react-native'
 import { useEffect, useState } from 'react';
 
