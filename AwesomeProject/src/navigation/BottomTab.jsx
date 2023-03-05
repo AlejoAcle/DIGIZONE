@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
+import { GreatPixelScreen } from '../screens/GreatPixelScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { ReduxScreen } from '../screens/ReduxScreen';
 
@@ -11,6 +12,7 @@ export const BottomTab = () =>{
         <Tab.Navigator>
             <Tab.Screen name='HomeScreen' component= { HomeScreen } />
             <Tab.Screen name='ReduxScreen' component= { ReduxScreen } />
+            <Tab.Screen name='GreatPixelScreen' component= { GreatPixelScreen } />
         </Tab.Navigator>
     );
 }

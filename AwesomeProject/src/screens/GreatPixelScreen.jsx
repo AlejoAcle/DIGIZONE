@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export const HomeScreen = () => {
+export const GreatPixelScreen = () => {
 
   return (
     <View>
-        <Text> Public API </Text>
+        <Text> GreatPixel </Text>
     </View>
   );
 }
