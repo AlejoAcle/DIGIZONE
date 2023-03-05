@@ -1,40 +1,59 @@
 import React from 'react';
-import { View, Text, Button, ActivityIndicator } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, Button } from 'react-native';
+import {navigation} from 'react-native'
 import { useEffect, useState } from 'react';
 
 export const HomeScreen = () => {
 
 //llamada API
+// const URL = "https://random.dog/woof.json";
 
-const URL = "https://random.dog/woof.json";
+//   const getRandomDog = async () =>{
+//     const response = await fetch(URL)
 
-  const getRandomDog = async () =>{
-    const response = await fetch(URL)
+//     const body = await response.json();
+//     return body.url;
+//   }
+  
+// //variables de estado de la url
+//   const [url, setUrl] = useState(null);
 
-    const body = await response.json();
-    return body.url;
+// //cada press recibe un estado nuevo, nueva llamada
+//   const onClickHandler = async() => {
+//     const url = await getRandomDog();
+//     setUrl(url);
+
+//   };
+
+
+  const [data, setData] = useState();
+  function handleOnPress() {
+    navigation.navigate('Redux')
   }
 
-  const [url, setUrl] = useState(null);
-
-  const onClickHandler = async() => {
-    const url = await getRandomDog();
-    setUrl(url);
-
-  };
+  useEffect(function(){
+    async function fetchData(){
+    const response = await fetch('https://randomuser.me/api/');
+    const json = await response.json();
+    setData(json.data);
+    }
+    fetchData();
+  },[]);
 
 
 
   return (
     <View style={{flex:1 , alignItems: 'center', justifyContent:'center', padding:10}}>
+      
         <Text
           style={{fontSize:26, fontWeight:'bold'}}
         > Press the button to get the data </Text>
         <Button 
           title='PRESS ME'
-          onPress={onClickHandler}
+          onPress={handleOnPress}
         ></Button>
-        <Text>{url}</Text>
+        {/* <Text>{url}</Text> */}
+        
     </View>
   );
 }
