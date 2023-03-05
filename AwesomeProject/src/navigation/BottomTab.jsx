@@ -14,7 +14,7 @@ export const BottomTab = () =>{
         <Tab.Navigator initialRouteName={HomeScreen} screenOptions={ ({route}) => ({
 
              tabBarActiveBackgroundColor:'lightgrey',
-             tabBarActiveTintColor: 'blue',
+             tabBarActiveTintColor: 'black',
              tabBarIcon: ({focused, color, size})=>{
                 let iconName = '';
                 switch ( route.name) {

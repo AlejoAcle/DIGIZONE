@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 export const HomeScreen = () => {
 
@@ -12,7 +12,11 @@ export const HomeScreen = () => {
     <View style={{flex:1 , alignItems: 'center', justifyContent:'center', padding:10}}>
         <Text
           style={{fontSize:26, fontWeight:'bold'}}
-        > Public API </Text>
+        > Press the button to get the data </Text>
+        <Button 
+          title='PRESS ME'
+          onPress={''}
+        ></Button>
     </View>
   );
 }
