@@ -1,45 +1,55 @@
 import React from 'react';
+// import axios from 'axios';
 import {  View, Text, Button } from 'react-native';
-import {navigation} from 'react-native'
-import { useEffect, useState } from 'react';
+// import {navigation} from 'react-native'
+// import { useEffect, useState } from 'react';
+import CustomButton from './CustomButton';
+
+
 
 export const HomeScreen = () => {
 
 //llamada API
-// const URL = "https://random.dog/woof.json";
 
-//   const getRandomDog = async () =>{
-//     const response = await fetch(URL)
 
-//     const body = await response.json();
-//     return body.url;
-//   }
+
+  // const [data, setData] = useState();
+  // function handleOnPress() {
+  //   navigation.navigate('Redux')
+  // }
+
+
+  // useEffect(function(){
+  //   async function fetchData(){
+  //   const response = await fetch('https://randomuser.me/api/');
+  //   const json = await response.json();
+  //   setData(json.data);
+  //   }
+  //   fetchData();
+  // },[]);
+
+
+  // const CustomButton = () => {
+  //   const [displayText, setDisplayText] = useState('');
   
-// //variables de estado de la url
-//   const [url, setUrl] = useState(null);
+  //   const handleButtonPress = () => {
+  //     setDisplayText('Texto que se muestra después de presionar el botón');
+  //   };
+  
+  //   return (
+  //     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+  //       <TouchableOpacity onPress={handleButtonPress}>
+  //         <Text>Presiona aquí</Text>
+  //       </TouchableOpacity>
+  //       <Text>{displayText}</Text>
+  //     </View>
+  //   );
+  // };
 
-// //cada press recibe un estado nuevo, nueva llamada
-//   const onClickHandler = async() => {
-//     const url = await getRandomDog();
-//     setUrl(url);
-
-//   };
 
 
-  const [data, setData] = useState();
-  function handleOnPress() {
-    navigation.navigate('Redux')
-  }
-
-  useEffect(function(){
-    async function fetchData(){
-    const response = await fetch('https://randomuser.me/api/');
-    const json = await response.json();
-    setData(json.data);
-    }
-    fetchData();
-  },[]);
-
+ 
+  
 
 
   return (
@@ -47,12 +57,13 @@ export const HomeScreen = () => {
       
         <Text
           style={{fontSize:26, fontWeight:'bold'}}
-        > Press the button to get the data </Text>
-        <Button 
+        > API call screen </Text>
+        {/* <Button 
           title='PRESS ME'
-          onPress={handleOnPress}
-        ></Button>
-        {/* <Text>{url}</Text> */}
+          onPress={filter}
+        ></Button> */}
+        <CustomButton />
+        {/* <Text>{CustomButton}</Text> */}
         
     </View>
   );

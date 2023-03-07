@@ -6,7 +6,6 @@ import { BottomTab } from './src/navigation/BottomTab';
 export default function App(){
   return (
     <NavigationContainer >
-      
       <BottomTab />
     </NavigationContainer>
   )
