@@ -16,23 +16,28 @@ export const GreatPixelScreen = () => {
         <Text
           style={{flex:1, alignItems:'center',justifyContent:'center',fontSize:26, fontWeight:'bold', color:'white'}}
         > GreatPixel </Text>
-
-        <View style={{flexDirection:'row', flex:1, alignItems:'center'}}>
-          <Image style={{width:50,height: 50,}}source={{uri: 'https://static.vecteezy.com/system/resources/previews/009/665/304/original/cute-kitty-cat-head-cartoon-element-free-png.png'}} />
-          <ActivityIndicator size="large" color="#00ff00" />
-          <Image style={{width:50,height: 50,}}source={{uri: 'https://static.vecteezy.com/system/resources/previews/010/178/999/original/cartoon-small-pizza-file-free-png.png',}} />
-        </View>
-
+        
+        <View style={{flex:2, alignItems:'center', alignContent:'center'}}>
+        <Text style={{ fontSize:25, fontWeight:'bold', color:'white'}}> Random Things 1</Text>
+          <View style={{flexDirection:'row', alignItems:'center'}}>
+            <Image style={{width:50,height: 50,}}source={{uri: 'https://static.vecteezy.com/system/resources/previews/009/665/304/original/cute-kitty-cat-head-cartoon-element-free-png.png'}} />
+            <ActivityIndicator size="large" color="#00ff00" />
+            <Image style={{width:50,height: 50,}}source={{uri: 'https://static.vecteezy.com/system/resources/previews/010/178/999/original/cartoon-small-pizza-file-free-png.png',}} />
+          </View>
+        
+          <Text style={{ fontSize:25, fontWeight:'bold', color:'white', paddingTop:40,paddingBottom:15}}> Random Things 2</Text>
         <View style={{flexDirection:'row', alignItems:'center'}}>
           <Image style={{width:50,height: 50,}}source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png',}} />
          <Image style={{width:50,height: 50,}}source={{uri: 'https://www.pngarts.com/files/5/Cookie-Monster-PNG-Background-Image.png',}} />
          <Image style={{width:50,height: 50,}}source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png',}} />
         </View>
 
-        <View style={{flexDirection:'row', flex:1, alignItems:'center'}}>
+        <Text style={{ fontSize:25, fontWeight:'bold', color:'white', paddingTop:40,paddingBottom:15}}> Random Things 3</Text>
+        <View style={{flexDirection:'row',  alignItems:'center'}}>
           <Image style={{width:50,height: 50,}}source={{uri: 'https://reactnative.dev/img/tiny_logo.png',}} />
           <Image style={{width:50,height: 50,}}source={{uri: 'https://reactnative.dev/docs/assets/p_cat1.png',}} />
           <Image style={{width:50,height: 50,}}source={{uri: 'https://reactnative.dev/img/tiny_logo.png',}} />
+        </View>
         </View>
 
     </ImageBackground>
