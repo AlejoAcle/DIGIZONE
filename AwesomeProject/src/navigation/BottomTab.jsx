@@ -34,10 +34,10 @@ export const BottomTab = () =>{
             }
             })}
         >
+            <Tab.Screen  name='Home' component= { HomeScreen }  options={{tabBarLabel: 'API' ,headerShown:''}}/>
+            <Tab.Screen name='Redux' component= { ReduxScreen } options={{tabBarLabel: 'Redux',headerShown:''}}/>
             
-            <Tab.Screen name='Redux' component= { ReduxScreen } options={{tabBarLabel: 'Redux'}}/>
-            <Tab.Screen  name='Home' component= { HomeScreen }  options={{tabBarLabel: 'API' }}/>
-            <Tab.Screen name='GreatPixel' component= { GreatPixelScreen } options={{tabBarLabel: 'GreatPixel'}} />
+            <Tab.Screen name='GreatPixel' component= { GreatPixelScreen } options={{tabBarLabel: 'GreatPixel', headerShown:''}} />
         </Tab.Navigator>
     );
 }
